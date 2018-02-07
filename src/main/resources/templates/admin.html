@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>Subir foto</h1>
+
+        <h1 th:inline="text">Bienvenido [[${#httpServletRequest.remoteUser}]]!</h1>
+
+        <form method="POST" enctype="multipart/form-data" th:action="@{/gophoto}">
+            <input type="file" accept="image/*" capture="camera" name="file"/>
+            <input type="email" value="Email recepcion"/>
+            <input type="submit" value="Enviar foto"/>
+        </form>
+
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>
