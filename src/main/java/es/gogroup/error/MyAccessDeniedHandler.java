@@ -1,4 +1,4 @@
-package com.gogroup.error;
+package es.gogroup.error;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

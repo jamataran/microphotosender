@@ -1,4 +1,4 @@
-package com.gogroup;
+package es.gogroup;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -7,23 +7,43 @@
 
 <div th:replace="fragments/header :: header"/>
 
-<div class="container">
+<div class="container-fluid">
 
-    <div class="starter-template">
-        <h1>Subir foto</h1>
+    <div class="row justify-content-center" style="padding: 10%">
+        <div class="col-12">
+            <h3>Servicio envio fotos</h3>
 
-        <h1 th:inline="text">Bienvenido [[${#httpServletRequest.remoteUser}]]!</h1>
-
-        <form method="POST" enctype="multipart/form-data" th:action="@{/gophoto}">
-            <input type="file" accept="image/*" capture="camera" name="file"/>
-            <input type="email" value="Email recepcion"/>
-            <input type="submit" value="Enviar foto"/>
-        </form>
-
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
-
+            <form method="POST"
+                  class="form-group"
+                  enctype="multipart/form-data"
+                  th:action="@{/gophoto}">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="image-upload" style="padding-top: 1%;">
+                            <label for="file">
+                                <img th:src="@{/images/camera.png}"
+                                     class="image-camera"/>
+                            </label>
+                            <input id="file"
+                                   type="file"
+                                   class=""
+                                   accept="image/*"
+                                   capture="camera"
+                                   name="file"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="padding-top: 1%;">
+                    <div class="col-6" style="padding-top: 1%;">
+                        <input type="email" name="email" id="email"
+                               class="form-control" placeholder="EMAIL DEL CLIENTE"/>
+                    </div>
+                    <div class="col-6" style="padding-top: 1%;">
+                        <input type="submit" class="btn btn-primary" value="Enviar"/>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 
 </div>

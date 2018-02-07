@@ -1,4 +1,4 @@
-package com.gogroup.service;
+package es.gogroup.service;
 
 import org.springframework.web.multipart.MultipartFile;
 

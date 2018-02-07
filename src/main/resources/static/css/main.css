@@ -1,11 +1,17 @@
-h1 {
-    color: #0000FF;
+.image-upload > input {
+    display: none;
 }
 
-h2 {
-    color: #FF0000;
+.image-camera {
+    width: 20%;
 }
 
-footer {
-    margin-top: 60px;
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.center {
+    margin: 0 auto;
+    width: 80%;
 }
